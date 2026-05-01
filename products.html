@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Catalog | SRU Steels Limited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="solid">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><div class="logo-mark">SRU</div><div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est. 1995</span></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="infrastructure.html">Infrastructure</a></li>
+      <li><a href="investors.html">Investors</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="#" class="btn btn-primary nav-cta" onclick="openModal()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobileMenu()">Home</a>
+  <a href="about.html" onclick="closeMobileMenu()">About Us</a>
+  <a href="products.html" onclick="closeMobileMenu()">Products</a>
+  <a href="infrastructure.html" onclick="closeMobileMenu()">Infrastructure</a>
+  <a href="investors.html" onclick="closeMobileMenu()">Investors</a>
+  <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+  <a href="#" class="btn btn-primary" onclick="openModal();closeMobileMenu()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="background:linear-gradient(135deg,rgba(10,22,40,0.90),rgba(26,47,82,0.88)),url('https://images.unsplash.com/photo-1624027492684-327af1fb7559?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+  <div class="page-hero-glow"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-breadcrumb">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Product Catalog</span>
+    </div>
+    <h1>Product <span>Catalog</span></h1>
+    <p>High-grade structural steel, TMT bars, billets, coils, and specialty products — manufactured to BIS standards with Just-In-Time supply chain solutions.</p>
+  </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section id="products-page">
+  <div class="container">
+
+    <!-- Controls -->
+    <div class="prod-controls reveal">
+      <div class="search-row">
+        <i class="fas fa-search search-icon"></i>
+        <input class="search-input" type="text" placeholder="Search products… e.g. TMT, billet, coil, pipe" oninput="searchProducts(this.value)">
+      </div>
+      <div class="filter-pills">
+        <button class="filter-pill active" onclick="filterProducts('all',this)">All Products</button>
+        <button class="filter-pill" onclick="filterProducts('tmt',this)">TMT Bars</button>
+        <button class="filter-pill" onclick="filterProducts('structural',this)">Structural Steel</button>
+        <button class="filter-pill" onclick="filterProducts('coils',this)">Coils &amp; Sheets</button>
+        <button class="filter-pill" onclick="filterProducts('billets',this)">Billets &amp; Rods</button>
+        <button class="filter-pill" onclick="filterProducts('specialty',this)">Specialty</button>
+      </div>
+    </div>
+
+    <!-- Catalog Grid -->
+    <div class="catalog-grid">
+
+      <!-- TMT Bars Fe 500D -->
+      <div class="cat-card reveal" data-categories="all,tmt" style="transition-delay:0.04s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://images.unsplash.com/photo-1763771420303-0f11ccf613d1?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge jit">JIT Ready</span>
+          <span class="cat-price">FROM ₹52,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>TMT Bars — Fe 500D</h3>
+          <p>High-ductility TMT rebars for earthquake-prone zones and high-rise structures. Superior bend-rebend properties with controlled chemistry.</p>
+          <div class="cat-specs">
+            <span class="spec">8mm – 32mm dia</span><span class="spec">BIS IS 1786:2008</span><span class="spec">Fe 500D Grade</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- TMT Bars Fe 550D -->
+      <div class="cat-card reveal" data-categories="all,tmt" style="transition-delay:0.08s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://images.unsplash.com/photo-1657358462228-548587dfae97?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge demand">High Demand</span>
+          <span class="cat-price">FROM ₹54,500/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>TMT Bars — Fe 550D</h3>
+          <p>Premium grade high-strength rebars with 550 N/mm² yield strength for ultra-high-rise buildings, bridges, and heavy civil construction.</p>
+          <div class="cat-specs">
+            <span class="spec">10mm – 32mm dia</span><span class="spec">BIS IS 1786:2008</span><span class="spec">Fe 550D Grade</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- Steel Billets -->
+      <div class="cat-card reveal" data-categories="all,billets" style="transition-delay:0.12s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://plus.unsplash.com/premium_photo-1682141567564-80942c426f3f?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge bulk">Bulk Pricing</span>
+          <span class="cat-price">FROM ₹44,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>Steel Billets (MS / Alloy)</h3>
+          <p>Semi-finished square billets for rolling mills, forging units and downstream re-rolling into bars, angles and channels.</p>
+          <div class="cat-specs">
+            <span class="spec">100×100 – 160×160mm</span><span class="spec">IS 2830:2012</span><span class="spec">Carbon / Alloy</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- Wire Rods -->
+      <div class="cat-card reveal" data-categories="all,billets" style="transition-delay:0.16s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://plus.unsplash.com/premium_photo-1661937868127-2f5a58dec30c?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge stock">Stock Available</span>
+          <span class="cat-price">FROM ₹50,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>Wire Rods (SAE 1006 / IS 1875)</h3>
+          <p>Precision-rolled wire rods for wire drawing, fastener manufacturing, PC wire, mesh production and spring applications.</p>
+          <div class="cat-specs">
+            <span class="spec">5.5mm – 14mm dia</span><span class="spec">SAE 1006 / IS 1875</span><span class="spec">Coil: 1.5T – 2T</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- HR Coils -->
+      <div class="cat-card reveal" data-categories="all,coils" style="transition-delay:0.2s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://images.unsplash.com/photo-1697698532602-ccf880036281?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge jit">JIT Ready</span>
+          <span class="cat-price">FROM ₹49,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>HR Coils &amp; Sheets</h3>
+          <p>Hot-rolled coils and sheets for automotive, pipe manufacturing, general fabrication and LPG cylinder production.</p>
+          <div class="cat-specs">
+            <span class="spec">1.6mm – 16mm THK</span><span class="spec">IS 10748 / IS 2062</span><span class="spec">Width: 900–1600mm</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- CR Sheets -->
+      <div class="cat-card reveal" data-categories="all,coils" style="transition-delay:0.24s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://plus.unsplash.com/premium_photo-1675188564944-472abfdc7ede?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge stock">Stock Available</span>
+          <span class="cat-price">FROM ₹55,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>CR Sheets &amp; Coils (CRCA / CRFH)</h3>
+          <p>Cold-rolled steel with superior surface finish and tight tolerances for appliances, automotive body panels, and precision engineering.</p>
+          <div class="cat-specs">
+            <span class="spec">0.3mm – 3.2mm THK</span><span class="spec">IS 513 / CRCA / CRFH</span><span class="spec">Width: up to 1600mm</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- Standard I-Beam -->
+      <div class="cat-card reveal" data-categories="all,structural" style="transition-delay:0.28s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://images.unsplash.com/photo-1766445318506-c6cc02f3c808?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge jit">JIT Ready</span>
+          <span class="cat-price">FROM ₹54,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>Standard I-Beam / ISMB</h3>
+          <p>IS 2062 E250 / E350 carbon steel for heavy structural applications, industrial frameworks, and load-bearing structures.</p>
+          <div class="cat-specs">
+            <span class="spec">ISMB 100 – 600</span><span class="spec">IS 2062 E250 / E350</span><span class="spec">Length: 10m / 12m</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- Angles & Channels -->
+      <div class="cat-card reveal" data-categories="all,structural" style="transition-delay:0.32s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://images.unsplash.com/photo-1557592494-37448a3f4b11?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge stock">Stock Available</span>
+          <span class="cat-price">FROM ₹51,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>Angles &amp; Channels (ISA / ISMC)</h3>
+          <p>Equal and unequal leg angles and parallel flange channels for fabrication, transmission towers, industrial sheds and purlins.</p>
+          <div class="cat-specs">
+            <span class="spec">ISA 25×25 – 200×200</span><span class="spec">ISMC 75 – 400</span><span class="spec">IS 2062 Compliant</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- Square Hollow Section -->
+      <div class="cat-card reveal" data-categories="all,structural" style="transition-delay:0.36s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://plus.unsplash.com/premium_photo-1661963767417-80e43ff30993?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge quote">Quote Needed</span>
+        </div>
+        <div class="cat-body">
+          <h3>Square &amp; Rectangular Hollow Sections</h3>
+          <p>Uniform-strength SHS and RHS sections for architectural frameworks, industrial machinery bases and column applications.</p>
+          <div class="cat-specs">
+            <span class="spec">25×25 – 250×250mm</span><span class="spec">IS 4923 / IS 1161</span><span class="spec">THK: 1.6mm – 12mm</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- Galvanized Coil -->
+      <div class="cat-card reveal" data-categories="all,coils,specialty" style="transition-delay:0.4s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://plus.unsplash.com/premium_photo-1675188564944-472abfdc7ede?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge stock">Stock Available</span>
+          <span class="cat-price">FROM ₹61,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>Galvanized Coils &amp; Sheets (GI / GP)</h3>
+          <p>High-precision zinc-coated CR sheets offering superior corrosion resistance for roofing, cladding and extreme environments.</p>
+          <div class="cat-specs">
+            <span class="spec">0.14mm – 2.0mm THK</span><span class="spec">IS 277 / IS 14812</span><span class="spec">Z80–Z275 Coating</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- Seamless Pipe -->
+      <div class="cat-card reveal" data-categories="all,specialty" style="transition-delay:0.44s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://plus.unsplash.com/premium_photo-1661962247387-6b5498e5b73a?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge cert">Certified</span>
+          <span class="cat-price">FROM ₹68,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>Seamless Steel Pipes (Schedule 40 / 80)</h3>
+          <p>Schedule 40 and 80 seamless pipes for high-pressure fluid transportation in petrochemical, power, and process industries.</p>
+          <div class="cat-specs">
+            <span class="spec">½" – 24" NB</span><span class="spec">IS 1978 / API 5L / ASTM A106</span><span class="spec">Sch 40 / 80 / 160</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+      <!-- Flat Bars -->
+      <div class="cat-card reveal" data-categories="all,structural,specialty" style="transition-delay:0.48s">
+        <div class="cat-img" style="background:linear-gradient(to bottom,rgba(10,22,40,0.15),rgba(10,22,40,0.65)),url('https://images.unsplash.com/photo-1697281679290-ad7be1b10682?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;">
+          <span class="avail-badge bulk">Bulk Pricing</span>
+          <span class="cat-price">FROM ₹48,000/T</span>
+        </div>
+        <div class="cat-body">
+          <h3>Flat Bars &amp; Plates (MS / HY 36)</h3>
+          <p>Mild steel and high-yield flat bars and plates for shipbuilding, pressure vessels, boiler fabrication and general engineering.</p>
+          <div class="cat-specs">
+            <span class="spec">THK: 5mm – 100mm</span><span class="spec">IS 2062 / IS 8500</span><span class="spec">Width: 50 – 1500mm</span>
+          </div>
+          <a href="#" class="btn btn-navy btn-sm" onclick="openModal()" style="width:100%;justify-content:center"><i class="fas fa-envelope"></i> Enquire Now</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CUSTOM FABRICATION CTA -->
+    <div class="fab-cta reveal">
+      <div class="fab-cta-icon"><i class="fas fa-wrench"></i></div>
+      <div style="flex:1">
+        <h3>Need Custom Fabrication?</h3>
+        <p>Specify custom dimensions, alloy grades, or specialised grooves for your project. Our technical team works with you from design to delivery.</p>
+      </div>
+      <a href="#" class="btn btn-primary" onclick="openModal()"><i class="fas fa-file-alt"></i> Request Custom Quote</a>
+    </div>
+
+    <!-- JIT LOGISTICS -->
+    <div class="jit-section reveal">
+      <div class="jit-left">
+        <span class="section-tag">Supply Chain</span>
+        <h3>Real-Time Logistics &amp; Just-In-Time Delivery</h3>
+        <p>All catalog items are tracked through our integrated supply chain network for guaranteed JIT (Just-In-Time) delivery. We process to your exact design specifications with zero storage needs on your end.</p>
+        <div class="jit-stats">
+          <div><div class="jit-stat-num">48h</div><div class="jit-stat-lbl">Avg. Transit</div></div>
+          <div><div class="jit-stat-num">12K</div><div class="jit-stat-lbl">Tonnes in Stock</div></div>
+          <div><div class="jit-stat-num">100%</div><div class="jit-stat-lbl">Grade Quality</div></div>
+          <div><div class="jit-stat-num">24/7</div><div class="jit-stat-lbl">Support</div></div>
+        </div>
+        <div style="margin-top:24px"><a href="contact.html" class="btn btn-navy"><i class="fas fa-truck"></i> Track Shipment</a></div>
+      </div>
+      <div class="jit-features">
+        <div class="jit-feat">
+          <div class="jit-feat-icon"><i class="fas fa-bolt"></i></div>
+          <div><h5>Just-In-Time Logistics</h5><p>Advanced delivery scheduling minimising on-site storage costs and eliminating stock-outs entirely.</p></div>
+        </div>
+        <div class="jit-feat">
+          <div class="jit-feat-icon"><i class="fas fa-cut"></i></div>
+          <div><h5>Custom Fabrication</h5><p>State-of-the-art CNC cutting, bending, and automated welding services for bespoke structural components.</p></div>
+        </div>
+        <div class="jit-feat">
+          <div class="jit-feat-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <div><h5>Pan-India Delivery</h5><p>22-state distribution network with 120+ logistics partners ensuring door-to-site delivery across India.</p></div>
+        </div>
+        <div class="jit-feat">
+          <div class="jit-feat-icon"><i class="fas fa-file-certificate"></i></div>
+          <div><h5>Mill Test Certificates</h5><p>Every consignment ships with NABL-validated MTCs, BIS certificates, and chemical analysis reports.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="index.html" class="logo"><div class="logo-mark">SRU</div><div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est. 1995</span></div></a><p>BSE-listed steel manufacturing company headquartered in New Delhi, delivering premium steel products across India since 1995.</p><div class="social-links"><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a><a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul class="f-links"><li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li><li><a href="infrastructure.html"><i class="fas fa-chevron-right"></i> Infrastructure</a></li><li><a href="investors.html"><i class="fas fa-chevron-right"></i> Investors</a></li><li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Products</h4><ul class="f-links"><li><a href="products.html"><i class="fas fa-chevron-right"></i> TMT Bars</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Steel Billets</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Wire Rods</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> HR Coils / Sheets</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> CR Sheets / Coils</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Structural Steel</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="f-contact"><li><i class="fas fa-location-dot"></i> C-47 G/F, Shivalik Colony, Malviya Nagar, New Delhi – 110017</li><li><i class="fas fa-phone"></i> +91 11 2668 4500</li><li><i class="fas fa-envelope"></i> srusteels@yahoo.in</li></ul></div>
+    </div>
+    <div class="footer-cert"><div class="cert-badges"><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 9001:2015</span><span class="cert-pill"><i class="fas fa-certificate"></i> BIS IS 1786</span><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 14001:2015</span><span class="cert-pill"><i class="fas fa-award"></i> NABL Lab</span><span class="cert-pill"><i class="fas fa-chart-line"></i> BSE Listed</span></div></div>
+    <div class="footer-bottom"><div><p>© 2025 SRU Steels Limited. All rights reserved.</p><p class="cin-text">CIN: L01111DL1995PLC107286 · ROC Delhi I</p></div><div class="fb-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Disclaimer</a></div></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="quoteModal"><div class="modal"><button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button><span class="section-tag">Quick Enquiry</span><h3 style="font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:6px">Get a Quote</h3><p style="font-size:0.83rem;color:var(--text-light);margin-bottom:24px">Our sales team will respond within 2 hours.</p><form onsubmit="submitQuote(event)"><div class="form-group"><label>Name *</label><input type="text" placeholder="Your full name" required></div><div class="form-group"><label>Phone *</label><input type="tel" placeholder="+91 98765 43210" required></div><div class="form-group"><label>Product Required</label><select><option>TMT Bars Fe 500D</option><option>TMT Bars Fe 550D</option><option>Steel Billets</option><option>Wire Rods</option><option>HR Coils / Sheets</option><option>CR Sheets / Coils</option><option>Structural Steel</option><option>Seamless Pipes</option><option>Galvanized Coils</option><option>Custom Fabrication</option></select></div><div class="form-group"><label>Quantity (MT)</label><input type="text" placeholder="e.g. 50 MT"></div><button type="submit" class="btn btn-primary form-btn"><i class="fas fa-paper-plane"></i> Request Quote</button></form></div></div>
+<button id="btt"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

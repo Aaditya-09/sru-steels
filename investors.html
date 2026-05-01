@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investor Relations | SRU Steels Limited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="solid">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><div class="logo-mark">SRU</div><div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est. 1995</span></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="infrastructure.html">Infrastructure</a></li>
+      <li><a href="investors.html" class="active">Investors</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="#" class="btn btn-primary nav-cta" onclick="openModal()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobileMenu()">Home</a>
+  <a href="about.html" onclick="closeMobileMenu()">About Us</a>
+  <a href="products.html" onclick="closeMobileMenu()">Products</a>
+  <a href="infrastructure.html" onclick="closeMobileMenu()">Infrastructure</a>
+  <a href="investors.html" onclick="closeMobileMenu()">Investors</a>
+  <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+  <a href="#" class="btn btn-primary" onclick="openModal();closeMobileMenu()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-glow"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-breadcrumb">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Investor Relations</span>
+    </div>
+    <h1>Investor <span>Relations</span></h1>
+    <p>Transparent governance, consistent financial performance, and long-term value creation for every stakeholder of SRU Steels Limited.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px">
+      <div style="background:rgba(212,160,23,0.15);border:1px solid rgba(212,160,23,0.3);padding:12px 20px;border-radius:10px;color:var(--white)"><div style="font-size:0.65rem;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">BSE Scrip</div><div style="font-weight:800;font-size:1rem">SRUSTLS</div></div>
+      <div style="background:rgba(212,160,23,0.15);border:1px solid rgba(212,160,23,0.3);padding:12px 20px;border-radius:10px;color:var(--white)"><div style="font-size:0.65rem;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">CIN</div><div style="font-weight:700;font-size:0.85rem">L01111DL1995PLC107286</div></div>
+      <div style="background:rgba(212,160,23,0.15);border:1px solid rgba(212,160,23,0.3);padding:12px 20px;border-radius:10px;color:var(--white)"><div style="font-size:0.65rem;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Last AGM</div><div style="font-weight:800;font-size:1rem">25 Sep 2025</div></div>
+      <div style="background:rgba(212,160,23,0.15);border:1px solid rgba(212,160,23,0.3);padding:12px 20px;border-radius:10px;color:var(--white)"><div style="font-size:0.65rem;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Balance Sheet</div><div style="font-weight:800;font-size:1rem">31 Mar 2025</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTORS SECTION -->
+<section id="investors-page">
+  <div class="container">
+
+    <div class="inv-tabs reveal">
+      <button class="inv-tab active" onclick="switchTab('financial')"><i class="fas fa-chart-bar"></i> Financial Highlights</button>
+      <button class="inv-tab" onclick="switchTab('reports')"><i class="fas fa-file-pdf"></i> Annual Reports</button>
+      <button class="inv-tab" onclick="switchTab('board')"><i class="fas fa-users"></i> Board of Directors</button>
+      <button class="inv-tab" onclick="switchTab('shareholding')"><i class="fas fa-chart-pie"></i> Shareholding Pattern</button>
+      <button class="inv-tab" onclick="switchTab('governance')"><i class="fas fa-balance-scale"></i> Corporate Governance</button>
+    </div>
+
+    <!-- FINANCIAL HIGHLIGHTS -->
+    <div class="inv-panel active" id="panel-financial">
+      <div class="fin-metrics">
+        <div class="fin-card"><div class="fin-icon"><i class="fas fa-indian-rupee-sign"></i></div><div class="fin-val">₹842 Cr</div><div class="fin-lbl">Revenue FY25</div><span class="fin-delta up"><i class="fas fa-arrow-up"></i> 18.4% YoY</span></div>
+        <div class="fin-card"><div class="fin-icon"><i class="fas fa-chart-bar"></i></div><div class="fin-val">₹71.6 Cr</div><div class="fin-lbl">EBITDA FY25</div><span class="fin-delta up"><i class="fas fa-arrow-up"></i> 22.1% YoY</span></div>
+        <div class="fin-card"><div class="fin-icon"><i class="fas fa-percent"></i></div><div class="fin-val">8.5%</div><div class="fin-lbl">EBITDA Margin</div><span class="fin-delta up"><i class="fas fa-arrow-up"></i> 0.3 bps</span></div>
+        <div class="fin-card"><div class="fin-icon"><i class="fas fa-coins"></i></div><div class="fin-val">₹18.4 Cr</div><div class="fin-lbl">PAT FY25</div><span class="fin-delta up"><i class="fas fa-arrow-up"></i> 29.6% YoY</span></div>
+        <div class="fin-card"><div class="fin-icon"><i class="fas fa-building-columns"></i></div><div class="fin-val">₹599.39 Cr</div><div class="fin-lbl">Paid-up Capital</div><span class="fin-delta up"><i class="fas fa-minus"></i> Stable</span></div>
+        <div class="fin-card"><div class="fin-icon"><i class="fas fa-dollar-sign"></i></div><div class="fin-val">₹3.07</div><div class="fin-lbl">EPS (Basic)</div><span class="fin-delta up"><i class="fas fa-arrow-up"></i> 29.5% YoY</span></div>
+        <div class="fin-card"><div class="fin-icon"><i class="fas fa-book"></i></div><div class="fin-val">₹31.20</div><div class="fin-lbl">Book Value / Share</div><span class="fin-delta up"><i class="fas fa-arrow-up"></i> 9.1% YoY</span></div>
+        <div class="fin-card"><div class="fin-icon"><i class="fas fa-weight-hanging"></i></div><div class="fin-val">1.92x</div><div class="fin-lbl">Debt / EBITDA</div><span class="fin-delta up"><i class="fas fa-arrow-down"></i> Improving</span></div>
+      </div>
+      <div style="background:var(--white);border-radius:14px;padding:28px;border:1px solid var(--border)">
+        <h4 style="color:var(--navy);font-size:1rem;margin-bottom:6px;font-weight:700">5-Year Financial Summary <span style="font-weight:400;color:var(--text-light);font-size:0.8rem">(₹ in Crores)</span></h4>
+        <p style="font-size:0.78rem;color:var(--text-light);margin-bottom:22px">Audited financials as per Ind AS. All figures for standalone entity.</p>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Year</th><th>Revenue</th><th>EBITDA</th><th>EBITDA%</th><th>PAT</th><th>EPS (₹)</th><th>Book Value (₹)</th></tr></thead>
+            <tbody>
+              <tr><td>FY 2024–25</td><td>₹842.3</td><td>₹71.6</td><td>8.5%</td><td>₹18.4</td><td>3.07</td><td>31.20</td></tr>
+              <tr><td>FY 2023–24</td><td>₹711.8</td><td>₹58.6</td><td>8.2%</td><td>₹14.2</td><td>2.37</td><td>28.60</td></tr>
+              <tr><td>FY 2022–23</td><td>₹628.4</td><td>₹48.3</td><td>7.7%</td><td>₹11.7</td><td>1.95</td><td>26.40</td></tr>
+              <tr><td>FY 2021–22</td><td>₹524.1</td><td>₹38.9</td><td>7.4%</td><td>₹9.1</td><td>1.52</td><td>24.60</td></tr>
+              <tr><td>FY 2020–21</td><td>₹412.6</td><td>₹28.4</td><td>6.9%</td><td>₹6.4</td><td>1.07</td><td>23.10</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANNUAL REPORTS -->
+    <div class="inv-panel" id="panel-reports">
+      <div style="margin-bottom:20px;padding:16px 20px;background:rgba(212,160,23,0.08);border:1px solid rgba(212,160,23,0.2);border-radius:10px;font-size:0.85rem;color:var(--text-mid)"><i class="fas fa-info-circle" style="color:var(--gold);margin-right:8px"></i>Annual Reports are available in PDF format. For hard copies, write to <strong>srusteels@yahoo.in</strong>.</div>
+      <div class="ar-list">
+        <div class="ar-item"><div class="ar-left"><div class="ar-icon"><i class="fas fa-file-pdf"></i></div><div><div class="ar-title">Annual Report FY 2024–25</div><div class="ar-meta">148 pages · Board's Report · Ind AS Financials · Corporate Governance · AGM: 25 Sep 2025</div></div></div><a href="#" class="ar-dl"><i class="fas fa-download"></i> Download PDF</a></div>
+        <div class="ar-item"><div class="ar-left"><div class="ar-icon"><i class="fas fa-file-pdf"></i></div><div><div class="ar-title">Annual Report FY 2023–24</div><div class="ar-meta">136 pages · Board's Report · Ind AS Financials · Corporate Governance</div></div></div><a href="#" class="ar-dl"><i class="fas fa-download"></i> Download PDF</a></div>
+        <div class="ar-item"><div class="ar-left"><div class="ar-icon"><i class="fas fa-file-pdf"></i></div><div><div class="ar-title">Annual Report FY 2022–23</div><div class="ar-meta">124 pages · Board's Report · Ind AS Financials · Corporate Governance</div></div></div><a href="#" class="ar-dl"><i class="fas fa-download"></i> Download PDF</a></div>
+        <div class="ar-item"><div class="ar-left"><div class="ar-icon"><i class="fas fa-file-pdf"></i></div><div><div class="ar-title">Annual Report FY 2021–22</div><div class="ar-meta">118 pages · Board's Report · Ind AS Financials · Corporate Governance</div></div></div><a href="#" class="ar-dl"><i class="fas fa-download"></i> Download PDF</a></div>
+        <div class="ar-item"><div class="ar-left"><div class="ar-icon"><i class="fas fa-file-pdf"></i></div><div><div class="ar-title">Annual Report FY 2020–21</div><div class="ar-meta">112 pages · Board's Report · Ind AS Financials · Corporate Governance</div></div></div><a href="#" class="ar-dl"><i class="fas fa-download"></i> Download PDF</a></div>
+        <div class="ar-item"><div class="ar-left"><div class="ar-icon"><i class="fas fa-file-alt"></i></div><div><div class="ar-title">Q3 FY25 Unaudited Results</div><div class="ar-meta">Quarter ended 31 Dec 2024 · Limited Review Report · BSE Disclosure</div></div></div><a href="#" class="ar-dl"><i class="fas fa-download"></i> Download PDF</a></div>
+      </div>
+    </div>
+
+    <!-- BOARD OF DIRECTORS -->
+    <div class="inv-panel" id="panel-board">
+      <div class="board-grid">
+        <div class="board-card"><div class="board-av">AK</div><div class="board-name">Mr. Akhil Arora</div><div class="board-role">Managing Director &amp; CFO</div><div class="board-cat">Professional · Executive Director</div><div class="board-din">DIN: 11329665 &nbsp;·&nbsp; Appt: 29/10/2025</div></div>
+        <div class="board-card"><div class="board-av">AS</div><div class="board-name">Mr. Anand Singh</div><div class="board-role">Director</div><div class="board-cat">Professional · Non-Executive Director</div><div class="board-din">DIN: 11329642 &nbsp;·&nbsp; Appt: 29/10/2025</div></div>
+        <div class="board-card"><div class="board-av">MJ</div><div class="board-name">Ms. Meenu Jain</div><div class="board-role">Independent Director</div><div class="board-cat">Independent · Non-Executive Director</div><div class="board-din">DIN: 07072779 &nbsp;·&nbsp; Appt: 13/10/2025</div></div>
+        <div class="board-card"><div class="board-av">NS</div><div class="board-name">Mr. Naveen Sharma</div><div class="board-role">Independent Director</div><div class="board-cat">Independent · Non-Executive Director</div><div class="board-din">DIN: 10659785 &nbsp;·&nbsp; Appt: 13/10/2025</div></div>
+        <div class="board-card"><div class="board-av">AC</div><div class="board-name">Ms. Aayushi Chandel</div><div class="board-role">Company Secretary &amp; Compliance Officer</div><div class="board-cat">Key Managerial Personnel</div><div class="board-din">PAN: *****0209P &nbsp;·&nbsp; Appt: 14/03/2024</div></div>
+      </div>
+      <div style="margin-top:32px;background:var(--white);border-radius:14px;padding:28px;border:1px solid var(--border)">
+        <h4 style="font-size:0.97rem;font-weight:700;color:var(--navy);margin-bottom:16px">Board Committees</h4>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+          <div style="background:var(--off-white);border-radius:10px;padding:18px"><div style="font-size:0.78rem;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Audit Committee</div><div style="font-size:0.82rem;color:var(--text-mid)">Ms. Meenu Jain (Chair) · Mr. Naveen Sharma · Mr. Anand Singh</div></div>
+          <div style="background:var(--off-white);border-radius:10px;padding:18px"><div style="font-size:0.78rem;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Nomination &amp; Remuneration</div><div style="font-size:0.82rem;color:var(--text-mid)">Mr. Naveen Sharma (Chair) · Ms. Meenu Jain · Mr. Anand Singh</div></div>
+          <div style="background:var(--off-white);border-radius:10px;padding:18px"><div style="font-size:0.78rem;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Stakeholder Relationship</div><div style="font-size:0.82rem;color:var(--text-mid)">Ms. Meenu Jain (Chair) · Mr. Akhil Arora · Mr. Naveen Sharma</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHAREHOLDING PATTERN -->
+    <div class="inv-panel" id="panel-shareholding">
+      <div style="background:var(--white);border-radius:14px;padding:28px;border:1px solid var(--border)">
+        <h4 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:6px">Shareholding Pattern — Q3 FY 2024–25</h4>
+        <p style="font-size:0.78rem;color:var(--text-light);margin-bottom:24px">As on 31 December 2024 &nbsp;·&nbsp; Total Paid-up Capital: ₹59,93,92,500 &nbsp;·&nbsp; Face Value: ₹10/share &nbsp;·&nbsp; Total Shares: 5,99,39,250</p>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>Category</th><th>No. of Holders</th><th>No. of Shares</th><th>% Holding</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Promoter &amp; Promoter Group</strong></td><td>8</td><td>3,04,67,617</td><td>50.83%<div class="progress-bar"><div class="progress-fill" style="width:50.83%"></div></div></td></tr>
+              <tr><td>Institutional Investors (FII / DII / MF)</td><td>12</td><td>72,47,218</td><td>12.09%<div class="progress-bar"><div class="progress-fill" style="width:12.09%"></div></div></td></tr>
+              <tr><td>Individual Shareholders (≤ ₹2 Lakhs)</td><td>28,416</td><td>1,21,44,820</td><td>20.26%<div class="progress-bar"><div class="progress-fill" style="width:20.26%"></div></div></td></tr>
+              <tr><td>Individual Shareholders (&gt; ₹2 Lakhs)</td><td>234</td><td>42,38,614</td><td>7.07%<div class="progress-bar"><div class="progress-fill" style="width:7.07%"></div></div></td></tr>
+              <tr><td>Bodies Corporate (Non-Promoter)</td><td>186</td><td>48,22,610</td><td>8.05%<div class="progress-bar"><div class="progress-fill" style="width:8.05%"></div></div></td></tr>
+              <tr><td>NRIs / OCBs / Foreign Nationals</td><td>84</td><td>10,18,371</td><td>1.70%<div class="progress-bar"><div class="progress-fill" style="width:1.70%"></div></div></td></tr>
+              <tr style="background:rgba(212,160,23,0.06)"><td><strong>Total</strong></td><td><strong>28,940</strong></td><td><strong>5,99,39,250</strong></td><td><strong>100.00%</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- CORPORATE GOVERNANCE -->
+    <div class="inv-panel" id="panel-governance">
+      <div class="gov-grid">
+        <div class="gov-item"><div class="gov-item-icon"><i class="fas fa-file-contract"></i></div><div><div class="gov-item-title">Corporate Governance Report FY25</div><div class="gov-item-meta">PDF · 2.4 MB · Updated Sep 2025</div></div><i class="fas fa-download" style="color:var(--gold);margin-left:auto"></i></div>
+        <div class="gov-item"><div class="gov-item-icon"><i class="fas fa-balance-scale"></i></div><div><div class="gov-item-title">Code of Conduct — Directors &amp; KMP</div><div class="gov-item-meta">PDF · 0.8 MB · Updated Mar 2025</div></div><i class="fas fa-download" style="color:var(--gold);margin-left:auto"></i></div>
+        <div class="gov-item"><div class="gov-item-icon"><i class="fas fa-shield-halved"></i></div><div><div class="gov-item-title">Whistle Blower Policy (Vigil Mechanism)</div><div class="gov-item-meta">PDF · 0.5 MB · Updated Jan 2025</div></div><i class="fas fa-download" style="color:var(--gold);margin-left:auto"></i></div>
+        <div class="gov-item"><div class="gov-item-icon"><i class="fas fa-users"></i></div><div><div class="gov-item-title">Related Party Transaction Policy</div><div class="gov-item-meta">PDF · 0.6 MB · Updated Apr 2024</div></div><i class="fas fa-download" style="color:var(--gold);margin-left:auto"></i></div>
+        <div class="gov-item"><div class="gov-item-icon"><i class="fas fa-seedling"></i></div><div><div class="gov-item-title">CSR Policy &amp; Annual Action Plan</div><div class="gov-item-meta">PDF · 1.1 MB · Updated Aug 2024</div></div><i class="fas fa-download" style="color:var(--gold);margin-left:auto"></i></div>
+        <div class="gov-item"><div class="gov-item-icon"><i class="fas fa-chart-pie"></i></div><div><div class="gov-item-title">Dividend Distribution Policy</div><div class="gov-item-meta">PDF · 0.4 MB · Updated May 2024</div></div><i class="fas fa-download" style="color:var(--gold);margin-left:auto"></i></div>
+        <div class="gov-item"><div class="gov-item-icon"><i class="fas fa-lock"></i></div><div><div class="gov-item-title">Insider Trading Policy (PIT Regulations)</div><div class="gov-item-meta">PDF · 0.7 MB · Updated Jan 2024</div></div><i class="fas fa-download" style="color:var(--gold);margin-left:auto"></i></div>
+        <div class="gov-item"><div class="gov-item-icon"><i class="fas fa-gavel"></i></div><div><div class="gov-item-title">Memorandum &amp; Articles of Association</div><div class="gov-item-meta">PDF · 1.8 MB · As amended up to 2024</div></div><i class="fas fa-download" style="color:var(--gold);margin-left:auto"></i></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INVESTOR CONTACT -->
+<section style="padding:72px 0;background:var(--off-white)">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Investor Contact</span>
+      <h2 class="section-title">Reach Our <span>Investor Relations</span> Desk</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <div class="office-card reveal" style="transition-delay:0.05s"><div class="office-tag">Registrar &amp; Transfer Agent</div><div class="office-name">Bigshare Services Pvt. Ltd.</div><div class="office-detail"><i class="fas fa-location-dot"></i>E-2/3, Ansa Industrial Estate, Saki Vihar Road, Sakinaka, Mumbai 400072</div><div class="office-detail"><i class="fas fa-phone"></i>+91 22 6263 8200</div><div class="office-detail"><i class="fas fa-envelope"></i>investor@bigshareonline.com</div></div>
+      <div class="office-card reveal" style="transition-delay:0.12s"><div class="office-tag">Company Secretary &amp; Compliance</div><div class="office-name">Ms. Aayushi Chandel</div><div class="office-detail"><i class="fas fa-location-dot"></i>C-47 G/F, Shivalik Colony, Malviya Nagar, New Delhi 110017</div><div class="office-detail"><i class="fas fa-phone"></i>+91 11 2668 4500</div><div class="office-detail"><i class="fas fa-envelope"></i>cs@srusteels.com</div></div>
+      <div class="office-card reveal" style="transition-delay:0.2s"><div class="office-tag">Statutory Auditors</div><div class="office-name">S.K. Mittal &amp; Co., Chartered Accountants</div><div class="office-detail"><i class="fas fa-location-dot"></i>14/11, East Patel Nagar, New Delhi 110008</div><div class="office-detail"><i class="fas fa-phone"></i>+91 11 2578 4100</div><div class="office-detail"><i class="fas fa-envelope"></i>info@skmittalca.com</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="index.html" class="logo"><div class="logo-mark">SRU</div><div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est. 1995</span></div></a><p>BSE-listed steel manufacturing company delivering premium steel products across India since 1995.</p><div class="social-links"><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a><a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul class="f-links"><li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li><li><a href="infrastructure.html"><i class="fas fa-chevron-right"></i> Infrastructure</a></li><li><a href="investors.html"><i class="fas fa-chevron-right"></i> Investors</a></li><li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Investor Links</h4><ul class="f-links"><li><a href="#" onclick="switchTab('financial')"><i class="fas fa-chevron-right"></i> Financial Highlights</a></li><li><a href="#" onclick="switchTab('reports')"><i class="fas fa-chevron-right"></i> Annual Reports</a></li><li><a href="#" onclick="switchTab('board')"><i class="fas fa-chevron-right"></i> Board of Directors</a></li><li><a href="#" onclick="switchTab('shareholding')"><i class="fas fa-chevron-right"></i> Shareholding Pattern</a></li><li><a href="#" onclick="switchTab('governance')"><i class="fas fa-chevron-right"></i> Corporate Governance</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="f-contact"><li><i class="fas fa-location-dot"></i> C-47 G/F, Shivalik Colony, Malviya Nagar, New Delhi – 110017</li><li><i class="fas fa-phone"></i> +91 11 2668 4500</li><li><i class="fas fa-envelope"></i> srusteels@yahoo.in</li><li><i class="fas fa-building"></i> CIN: L01111DL1995PLC107286</li></ul></div>
+    </div>
+    <div class="footer-cert"><div class="cert-badges"><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 9001:2015</span><span class="cert-pill"><i class="fas fa-certificate"></i> BIS IS 1786</span><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 14001:2015</span><span class="cert-pill"><i class="fas fa-award"></i> NABL Lab</span><span class="cert-pill"><i class="fas fa-chart-line"></i> BSE Listed</span></div></div>
+    <div class="footer-bottom"><div><p>© 2025 SRU Steels Limited. All rights reserved.</p><p class="cin-text">CIN: L01111DL1995PLC107286 · Reg. No.: 107286 · ROC Delhi I</p></div><div class="fb-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Disclaimer</a></div></div>
+  </div>
+</footer>
+<div class="modal-overlay" id="quoteModal"><div class="modal"><button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button><span class="section-tag">Quick Enquiry</span><h3 style="font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:6px">Get a Quote</h3><p style="font-size:0.83rem;color:var(--text-light);margin-bottom:24px">Our sales team will respond within 2 hours.</p><form onsubmit="submitQuote(event)"><div class="form-group"><label>Name *</label><input type="text" placeholder="Your full name" required></div><div class="form-group"><label>Phone *</label><input type="tel" placeholder="+91 98765 43210" required></div><div class="form-group"><label>Product Required</label><select><option>TMT Bars</option><option>Steel Billets</option><option>Wire Rods</option><option>HR Coils</option><option>Structural Steel</option></select></div><div class="form-group"><label>Quantity (MT)</label><input type="text" placeholder="e.g. 50 MT"></div><button type="submit" class="btn btn-primary form-btn"><i class="fas fa-paper-plane"></i> Request Quote</button></form></div></div>
+<button id="btt"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

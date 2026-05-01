@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | SRU Steels Limited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="solid">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><div class="logo-mark">SRU</div><div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est. 1995</span></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="infrastructure.html">Infrastructure</a></li>
+      <li><a href="investors.html">Investors</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="#" class="btn btn-primary nav-cta" onclick="openModal()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobileMenu()">Home</a>
+  <a href="about.html" onclick="closeMobileMenu()">About Us</a>
+  <a href="products.html" onclick="closeMobileMenu()">Products</a>
+  <a href="infrastructure.html" onclick="closeMobileMenu()">Infrastructure</a>
+  <a href="investors.html" onclick="closeMobileMenu()">Investors</a>
+  <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+  <a href="#" class="btn btn-primary" onclick="openModal();closeMobileMenu()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="background:linear-gradient(135deg,rgba(10,22,40,0.90),rgba(26,47,82,0.88)),url('https://images.unsplash.com/photo-1624027492684-327af1fb7559?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+  <div class="page-hero-glow"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-breadcrumb">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>About Us</span>
+    </div>
+    <h1>India's Trusted <span>Steel</span> Manufacturer</h1>
+    <p>Three decades of precision manufacturing, ethical business practices, and delivering strength to India's infrastructure — one tonne at a time.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="about-story">
+  <div class="container">
+    <div class="as-grid">
+      <div class="as-img reveal-l" style="background:url('https://plus.unsplash.com/premium_photo-1661932816149-291a447e3022?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;overflow:hidden;min-height:420px;"></div>
+      <div class="reveal-r">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">From Trading Firm to <span>Manufacturing Powerhouse</span></h2>
+        <p>SRU Steels Limited was incorporated on <strong>11th September 1995</strong> by a group of visionary industrialists in New Delhi. What began as a modest steel trading enterprise in Malviya Nagar has evolved into a BSE-listed, integrated steel manufacturer with an authorised capital of ₹62.50 Crores and paid-up capital of ₹59.93 Crores.</p>
+        <p>Today, SRU Steels operates three state-of-the-art manufacturing facilities across Northern India, supplying premium TMT bars, steel billets, wire rods, and structural steel to the country's leading builders, contractors, and re-rolling mills across 22 states.</p>
+        <p>Guided by the principles of quality, transparency, and customer-centricity, we have forged lasting partnerships with over 1,200 clients — making us one of the most reliable names in India's steel sector.</p>
+        <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+          <a href="products.html" class="btn btn-navy"><i class="fas fa-cubes"></i> Our Products</a>
+          <a href="contact.html" class="btn btn-primary"><i class="fas fa-phone"></i> Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="reveal">
+      <span class="section-tag">Our Journey</span>
+      <h2 class="section-title" style="margin-bottom:36px">Three Decades of <span>Milestones</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+      <div class="timeline reveal-l">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">1995</div>
+          <div class="tl-title">Company Founded</div>
+          <div class="tl-desc">SRU Steels Limited incorporated in New Delhi with initial capital of ₹5 Crores as a steel trading and distribution company.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2001</div>
+          <div class="tl-title">First Manufacturing Plant</div>
+          <div class="tl-desc">Commissioned first rolling mill at Kundli, Haryana with 40,000 TPA capacity. Shifted from trading to manufacturing.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2007</div>
+          <div class="tl-title">BSE Listing</div>
+          <div class="tl-desc">Listed on Bombay Stock Exchange under scrip code SRUSTLS. Raised ₹18 Cr via public issue to fund capacity expansion.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2012</div>
+          <div class="tl-title">BIS Certification &amp; ISO 9001</div>
+          <div class="tl-desc">Obtained BIS IS 1786 mark for TMT bars and ISO 9001:2008 certification — establishing quality as a core differentiator.</div>
+        </div>
+      </div>
+      <div class="timeline reveal-r">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2016</div>
+          <div class="tl-title">Second Plant Commissioned</div>
+          <div class="tl-desc">Greenfield plant at Neemrana, Rajasthan with 80,000 TPA capacity and Electric Arc Furnace for primary steel production.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2019</div>
+          <div class="tl-title">Authorised Capital Enhanced</div>
+          <div class="tl-desc">Authorised capital enhanced to ₹62.50 Crores. Reached ₹524 Cr revenue milestone. Entered wire rod and HR coil segments.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2022</div>
+          <div class="tl-title">NABL Lab &amp; Solar Energy</div>
+          <div class="tl-desc">Commissioned NABL-accredited metallurgical laboratory and 2 MW captive solar power plant as part of green manufacturing drive.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-title">₹842 Cr Revenue &amp; Rajasthan Expansion</div>
+          <div class="tl-desc">Achieved record ₹842 Cr revenue in FY25. Board approved new 1.5 lakh TPA greenfield plant in Bhiwadi, Rajasthan.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION VISION -->
+<section style="padding:80px 0;background:var(--off-white)">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Purpose &amp; Direction</span>
+      <h2 class="section-title">Our Mission &amp; <span>Vision</span></h2>
+    </div>
+    <div class="mv-row">
+      <div class="mv-card mission reveal-l">
+        <div class="mv-card-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To manufacture and deliver the highest quality steel products that power India's infrastructure growth, while maintaining ethical business practices, creating stakeholder value, and fostering innovation across every stage of our operations.</p>
+      </div>
+      <div class="mv-card vision reveal-r">
+        <div class="mv-card-icon"><i class="fas fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>To be among India's top 25 steel companies by 2030, recognised for our commitment to quality, sustainability, and customer satisfaction — building the backbone of a stronger, self-reliant Bharat through superior steel solutions.</p>
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <div class="section-header reveal">
+      <span class="section-tag">Our Values</span>
+      <h2 class="section-title">Principles That <span>Guide Us</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px" class="values-row">
+      <div class="wu-card reveal" style="background:var(--white);border:1px solid var(--border);transition-delay:0.05s"><div class="wu-icon" style="background:linear-gradient(135deg,#0A1628,#1a2f52)"><i class="fas fa-handshake"></i></div><h4 style="color:var(--navy)">Integrity</h4><p style="color:var(--text-mid)">Transparent dealings, honest pricing, and ethical conduct with every stakeholder — customers, employees, and investors.</p></div>
+      <div class="wu-card reveal" style="background:var(--white);border:1px solid var(--border);transition-delay:0.12s"><div class="wu-icon" style="background:linear-gradient(135deg,#0A1628,#1a2f52)"><i class="fas fa-microscope"></i></div><h4 style="color:var(--navy)">Innovation</h4><p style="color:var(--text-mid)">Continuously improving our processes, adopting new technologies, and developing better steel solutions for evolving market needs.</p></div>
+      <div class="wu-card reveal" style="background:var(--white);border:1px solid var(--border);transition-delay:0.2s"><div class="wu-icon" style="background:linear-gradient(135deg,#0A1628,#1a2f52)"><i class="fas fa-leaf"></i></div><h4 style="color:var(--navy)">Sustainability</h4><p style="color:var(--text-mid)">Committed to zero-effluent operations, renewable energy adoption, and reducing our carbon footprint every year.</p></div>
+      <div class="wu-card reveal" style="background:var(--white);border:1px solid var(--border);transition-delay:0.28s"><div class="wu-icon" style="background:linear-gradient(135deg,#0A1628,#1a2f52)"><i class="fas fa-users"></i></div><h4 style="color:var(--navy)">People First</h4><p style="color:var(--text-mid)">Over 850 employees, competitive wages, safe working environments, and continuous skill development programmes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="about-awards">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Recognition</span>
+      <h2 class="section-title">Awards &amp; <span>Accolades</span></h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-card reveal" style="transition-delay:0.05s"><div class="award-icon"><i class="fas fa-trophy"></i></div><h4>Best SME Steel Producer — North India 2024</h4><p>ASSOCHAM Annual Excellence Awards, January 2025</p></div>
+      <div class="award-card reveal" style="transition-delay:0.12s"><div class="award-icon"><i class="fas fa-medal"></i></div><h4>Green Manufacturing Excellence 2023</h4><p>CII — Confederation of Indian Industry, Sustainability Category</p></div>
+      <div class="award-card reveal" style="transition-delay:0.2s"><div class="award-icon"><i class="fas fa-star"></i></div><h4>MSME National Quality Award 2022</h4><p>Ministry of MSME, Government of India — Category: Manufacturing</p></div>
+      <div class="award-card reveal" style="transition-delay:0.28s"><div class="award-icon"><i class="fas fa-shield-halved"></i></div><h4>Best Corporate Governance — Mid-Cap 2021</h4><p>BSE-SEBI Annual Investor Relations &amp; Governance Summit</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">What Sets Us <span>Apart</span></h2>
+      <p class="section-subtitle">Decades of expertise combined with modern manufacturing capabilities make us the preferred partner for India's leading builders.</p>
+    </div>
+    <div class="wu-grid">
+      <div class="wu-card reveal" style="transition-delay:0.05s"><div class="wu-icon"><i class="fas fa-award"></i></div><h4>Quality Assurance</h4><p>NABL-accredited lab, 100% batch testing, ISO 9001:2015 certified. Zero-compromise quality at every stage.</p></div>
+      <div class="wu-card reveal" style="transition-delay:0.12s"><div class="wu-icon"><i class="fas fa-truck-fast"></i></div><h4>On-Time Delivery</h4><p>120+ logistics partners, real-time tracking, and a 98.7% on-time delivery record across India.</p></div>
+      <div class="wu-card reveal" style="transition-delay:0.2s"><div class="wu-icon"><i class="fas fa-tags"></i></div><h4>Competitive Pricing</h4><p>Direct-to-customer pricing, transparent quotations, bulk discounts, and flexible payment terms.</p></div>
+      <div class="wu-card reveal" style="transition-delay:0.28s"><div class="wu-icon"><i class="fas fa-map-location-dot"></i></div><h4>Pan-India Reach</h4><p>22 states, 85+ authorised dealers. From Kashmir to Kanyakumari — wherever India builds, we deliver.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="container cta-inner">
+    <div class="cta-text"><h2>Partner With Us Today</h2><p>Get a competitive quote delivered to your inbox within 2 business hours.</p></div>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-cta-navy" onclick="openModal()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
+      <a href="contact.html" class="btn btn-cta-wh"><i class="fas fa-phone"></i> Talk to Sales</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo"><div class="logo-mark">SRU</div><div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est. 1995</span></div></a>
+        <p>BSE-listed steel manufacturing company headquartered in New Delhi, delivering premium steel products across India since 1995.</p>
+        <div class="social-links"><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a><a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul class="f-links"><li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li><li><a href="infrastructure.html"><i class="fas fa-chevron-right"></i> Infrastructure</a></li><li><a href="investors.html"><i class="fas fa-chevron-right"></i> Investors</a></li><li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Products</h4><ul class="f-links"><li><a href="products.html"><i class="fas fa-chevron-right"></i> TMT Bars</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Steel Billets</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Wire Rods</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> HR Coils / Sheets</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> CR Sheets / Coils</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Structural Steel</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="f-contact"><li><i class="fas fa-location-dot"></i> C-47 G/F, Shivalik Colony, Malviya Nagar, New Delhi – 110017</li><li><i class="fas fa-phone"></i> +91 11 2668 4500</li><li><i class="fas fa-envelope"></i> srusteels@yahoo.in</li><li><i class="fas fa-building"></i> CIN: L01111DL1995PLC107286</li></ul></div>
+    </div>
+    <div class="footer-cert"><div class="cert-badges"><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 9001:2015</span><span class="cert-pill"><i class="fas fa-certificate"></i> BIS IS 1786</span><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 14001:2015</span><span class="cert-pill"><i class="fas fa-award"></i> NABL Lab</span><span class="cert-pill"><i class="fas fa-chart-line"></i> BSE Listed</span></div></div>
+    <div class="footer-bottom"><div><p>© 2025 SRU Steels Limited. All rights reserved.</p><p class="cin-text">CIN: L01111DL1995PLC107286 · Reg. No.: 107286 · ROC Delhi I</p></div><div class="fb-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Disclaimer</a></div></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="quoteModal"><div class="modal"><button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button><span class="section-tag">Quick Enquiry</span><h3 style="font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:6px">Get a Quote</h3><p style="font-size:0.83rem;color:var(--text-light);margin-bottom:24px">Our sales team will respond within 2 hours.</p><form onsubmit="submitQuote(event)"><div class="form-group"><label>Name *</label><input type="text" placeholder="Your full name" required></div><div class="form-group"><label>Phone *</label><input type="tel" placeholder="+91 98765 43210" required></div><div class="form-group"><label>Product Required</label><select><option>TMT Bars</option><option>Steel Billets</option><option>Wire Rods</option><option>HR Coils / Sheets</option><option>CR Sheets / Coils</option><option>Structural Steel</option></select></div><div class="form-group"><label>Quantity (MT)</label><input type="text" placeholder="e.g. 50 MT"></div><button type="submit" class="btn btn-primary form-btn"><i class="fas fa-paper-plane"></i> Request Quote</button></form></div></div>
+<button id="btt"><i class="fas fa-chevron-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>
