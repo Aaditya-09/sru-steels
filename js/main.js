@@ -2,19 +2,22 @@
    SRU STEELS — SHARED JAVASCRIPT
    ==================================================== */
 
-/* ===== NAVBAR ===== */
-const navbar   = document.getElementById('navbar');
-const mobileMenu  = document.getElementById('mobileMenu');
-const hamburger   = document.getElementById('hamburger');
-const btt         = document.getElementById('btt');
+// ── Replace this with your Railway URL after deployment ──────────────────────
+const API_URL = "https://YOUR-RAILWAY-URL.up.railway.app";
+// ─────────────────────────────────────────────────────────────────────────────
 
-// Determine if page starts with a transparent hero
+/* ===== NAVBAR ===== */
+const navbar = document.getElementById('navbar');
+const mobileMenu = document.getElementById('mobileMenu');
+const hamburger = document.getElementById('hamburger');
+const btt = document.getElementById('btt');
+
 const hasTransparentHero = !!document.getElementById('home-hero');
 
 function updateNavbar() {
   const y = window.scrollY;
   if (hasTransparentHero) {
-    navbar.classList.toggle('scrolled',     y > 60);
+    navbar.classList.toggle('scrolled', y > 60);
     navbar.classList.toggle('transparent', y <= 60);
   } else {
     navbar.classList.add('solid');
@@ -23,7 +26,6 @@ function updateNavbar() {
   revealAll();
 }
 
-// Set active nav link based on current page
 function setActiveNav() {
   const page = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .mobile-menu a[data-page]').forEach(a => {
@@ -38,14 +40,13 @@ function setActiveNav() {
   });
 }
 
-// Hamburger
 if (hamburger) {
   hamburger.addEventListener('click', () => {
     mobileMenu.classList.toggle('open');
     const s = hamburger.querySelectorAll('span');
     const open = mobileMenu.classList.contains('open');
     s[0].style.transform = open ? 'rotate(45deg) translate(5px,5px)' : '';
-    s[1].style.opacity   = open ? '0' : '';
+    s[1].style.opacity = open ? '0' : '';
     s[2].style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : '';
   });
 }
@@ -58,14 +59,12 @@ function closeMobileMenu() {
   s[1].style.opacity = '';
 }
 
-// Back to top
 if (btt) btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// Scroll listener
 window.addEventListener('scroll', updateNavbar, { passive: true });
-window.addEventListener('load',   updateNavbar);
+window.addEventListener('load', updateNavbar);
 
-/* ===== SMOOTH SCROLL (same-page anchors) ===== */
+/* ===== SMOOTH SCROLL ===== */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -102,7 +101,7 @@ function runCounters() {
   });
 }
 window.addEventListener('scroll', runCounters, { passive: true });
-window.addEventListener('load',   runCounters);
+window.addEventListener('load', runCounters);
 
 /* ===== INVESTOR TABS ===== */
 function switchTab(id) {
@@ -116,27 +115,19 @@ function switchTab(id) {
 
 /* ===== PRODUCT FILTER ===== */
 function filterProducts(category, btn) {
-  // Update pills
   document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
-  // Filter cards
   document.querySelectorAll('.cat-card').forEach(card => {
     const cats = (card.dataset.categories || '').split(',');
-    if (category === 'all' || cats.includes(category)) {
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
+    card.classList.toggle('hidden', category !== 'all' && !cats.includes(category));
   });
 }
 
 function searchProducts(query) {
   const q = query.toLowerCase().trim();
   document.querySelectorAll('.cat-card').forEach(card => {
-    const text = card.textContent.toLowerCase();
-    card.classList.toggle('hidden', q.length > 0 && !text.includes(q));
+    card.classList.toggle('hidden', q.length > 0 && !card.textContent.toLowerCase().includes(q));
   });
-  // Reset filter pills to 'All' when searching
   if (q.length > 0) {
     document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
     const allPill = document.querySelector('.filter-pill[onclick*="all"]');
@@ -148,9 +139,7 @@ function searchProducts(query) {
 function toggleFaq(el) {
   const answer = el.nextElementSibling;
   const isOpen = el.classList.contains('open');
-  // Close all
   document.querySelectorAll('.faq-q').forEach(q => { q.classList.remove('open'); q.nextElementSibling.style.display = 'none'; });
-  // Open clicked (if wasn't open)
   if (!isOpen) { el.classList.add('open'); answer.style.display = 'block'; }
 }
 
@@ -165,22 +154,91 @@ function closeModal() {
 }
 document.addEventListener('DOMContentLoaded', () => {
   const m = document.getElementById('quoteModal');
-  if (m) {
-    m.addEventListener('click', e => { if (e.target === m) closeModal(); });
-  }
+  if (m) m.addEventListener('click', e => { if (e.target === m) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
   setActiveNav();
   updateNavbar();
 });
 
-/* ===== FORM HANDLERS ===== */
-function submitContact(e) {
-  e.preventDefault();
-  const ok = document.getElementById('formSuccess');
-  if (ok) { ok.style.display = 'block'; e.target.reset(); setTimeout(() => ok.style.display = 'none', 6000); }
+/* ===== FORM HELPERS ===== */
+function setButtonLoading(btn, loading) {
+  if (loading) {
+    btn.disabled = true;
+    btn.dataset.original = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+  } else {
+    btn.disabled = false;
+    btn.innerHTML = btn.dataset.original;
+  }
 }
-function submitQuote(e) {
+
+/* ===== CONTACT FORM ===== */
+async function submitContact(e) {
   e.preventDefault();
-  closeModal();
-  setTimeout(() => alert('Thank you! Our sales team will call you within 2 hours with a competitive quote.'), 300);
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const success = document.getElementById('formSuccess');
+
+  // Collect all named inputs in order
+  const inputs = form.querySelectorAll('input, select, textarea');
+  const data = {
+    name: inputs[0].value.trim(),
+    company: inputs[1].value.trim(),
+    email: inputs[2].value.trim(),
+    phone: inputs[3].value.trim(),
+    enquiry_type: inputs[4].value,
+    product: inputs[5].value,
+    message: inputs[6].value.trim(),
+  };
+
+  setButtonLoading(btn, true);
+  try {
+    const res = await fetch(`${API_URL}/api/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Server error');
+    form.reset();
+    if (success) {
+      success.style.display = 'block';
+      setTimeout(() => success.style.display = 'none', 6000);
+    }
+  } catch (err) {
+    alert('Something went wrong. Please call us directly on +91 11 2668 4500.');
+  } finally {
+    setButtonLoading(btn, false);
+  }
+}
+
+/* ===== QUOTE MODAL FORM ===== */
+async function submitQuote(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const inputs = form.querySelectorAll('input, select');
+
+  const data = {
+    name: inputs[0].value.trim(),
+    phone: inputs[1].value.trim(),
+    product: inputs[2].value,
+    quantity: inputs[3].value.trim() || 'Not specified',
+  };
+
+  setButtonLoading(btn, true);
+  try {
+    const res = await fetch(`${API_URL}/api/quote`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Server error');
+    closeModal();
+    setTimeout(() => alert('✅ Quote request sent! Our sales team will call you within 2 hours.'), 300);
+    form.reset();
+  } catch (err) {
+    alert('Something went wrong. Please call us on +91 11 2668 4500.');
+  } finally {
+    setButtonLoading(btn, false);
+  }
 }
