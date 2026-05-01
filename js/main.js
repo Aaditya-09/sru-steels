@@ -3,7 +3,7 @@
    ==================================================== */
 
 // ── Replace this with your Railway URL after deployment ──────────────────────
-const API_URL = "https://YOUR-RAILWAY-URL.up.railway.app";
+const API_URL = "sru-steels-production.up.railway.app";
 // ─────────────────────────────────────────────────────────────────────────────
 
 /* ===== NAVBAR ===== */
