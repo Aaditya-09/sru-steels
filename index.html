@@ -332,10 +332,11 @@
     <h3 style="font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:6px">Get a Quote</h3>
     <p style="font-size:0.83rem;color:var(--text-light);margin-bottom:24px">Our sales team will send a competitive quote within 2 hours.</p>
     <form onsubmit="submitQuote(event)">
-      <div class="form-group"><label>Name *</label><input type="text" placeholder="Your full name" required></div>
-      <div class="form-group"><label>Phone *</label><input type="tel" placeholder="+91 98765 43210" required></div>
-      <div class="form-group"><label>Product Required</label><select><option>TMT Bars (Fe 500D / Fe 550D)</option><option>Steel Billets</option><option>Wire Rods</option><option>HR Coils / Sheets</option><option>CR Sheets / Coils</option><option>Structural Steel Sections</option></select></div>
-      <div class="form-group"><label>Quantity (MT)</label><input type="text" placeholder="e.g. 50 MT"></div>
+      <input type="hidden" name="_subject" value="New Quote Request — SRU Steels Website">
+      <div class="form-group"><label>Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
+      <div class="form-group"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 98765 43210" required></div>
+      <div class="form-group"><label>Product Required</label><select name="product"><option>TMT Bars (Fe 500D / Fe 550D)</option><option>Steel Billets</option><option>Wire Rods</option><option>HR Coils / Sheets</option><option>CR Sheets / Coils</option><option>Structural Steel Sections</option></select></div>
+      <div class="form-group"><label>Quantity (MT)</label><input type="text" name="quantity" placeholder="e.g. 50 MT"></div>
       <button type="submit" class="btn btn-primary form-btn"><i class="fas fa-paper-plane"></i> Request Quote</button>
     </form>
   </div>

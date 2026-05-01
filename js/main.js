@@ -2,8 +2,9 @@
    SRU STEELS — SHARED JAVASCRIPT
    ==================================================== */
 
-// ── Replace this with your Railway URL after deployment ──────────────────────
-const API_URL = "sru-steels-production.up.railway.app";
+// ── Formspree endpoints — replace with your own IDs from formspree.io ────────
+const FORMSPREE_CONTACT = 'https://formspree.io/f/xkoyndrr';
+const FORMSPREE_QUOTE = 'https://formspree.io/f/xrejgnqa';
 // ─────────────────────────────────────────────────────────────────────────────
 
 /* ===== NAVBAR ===== */
@@ -179,29 +180,18 @@ async function submitContact(e) {
   const btn = form.querySelector('button[type="submit"]');
   const success = document.getElementById('formSuccess');
 
-  // Collect all named inputs in order
-  const inputs = form.querySelectorAll('input, select, textarea');
-  const data = {
-    name: inputs[0].value.trim(),
-    company: inputs[1].value.trim(),
-    email: inputs[2].value.trim(),
-    phone: inputs[3].value.trim(),
-    enquiry_type: inputs[4].value,
-    product: inputs[5].value,
-    message: inputs[6].value.trim(),
-  };
-
   setButtonLoading(btn, true);
   try {
-    const res = await fetch(`${API_URL}/api/contact`, {
+    const res = await fetch(FORMSPREE_CONTACT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
     });
-    if (!res.ok) throw new Error('Server error');
+    const json = await res.json();
+    if (!res.ok || json.errors) throw new Error((json.errors || [{}])[0].message || 'Error');
     form.reset();
     if (success) {
-      success.style.display = 'block';
+      success.style.display = 'flex';
       setTimeout(() => success.style.display = 'none', 6000);
     }
   } catch (err) {
@@ -216,26 +206,19 @@ async function submitQuote(e) {
   e.preventDefault();
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
-  const inputs = form.querySelectorAll('input, select');
-
-  const data = {
-    name: inputs[0].value.trim(),
-    phone: inputs[1].value.trim(),
-    product: inputs[2].value,
-    quantity: inputs[3].value.trim() || 'Not specified',
-  };
 
   setButtonLoading(btn, true);
   try {
-    const res = await fetch(`${API_URL}/api/quote`, {
+    const res = await fetch(FORMSPREE_QUOTE, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
     });
-    if (!res.ok) throw new Error('Server error');
+    const json = await res.json();
+    if (!res.ok || json.errors) throw new Error((json.errors || [{}])[0].message || 'Error');
+    form.reset();
     closeModal();
     setTimeout(() => alert('✅ Quote request sent! Our sales team will call you within 2 hours.'), 300);
-    form.reset();
   } catch (err) {
     alert('Something went wrong. Please call us on +91 11 2668 4500.');
   } finally {
