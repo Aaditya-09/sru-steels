@@ -1,73 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | SRU Steels Limited</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SRU Steels Limited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav id="navbar" class="solid">
-  <div class="nav-inner">
-    <a href="index.html" class="logo"><div class="logo-mark">SRU</div><div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est. 1995</span></div></a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="infrastructure.html">Infrastructure</a></li>
-      <li><a href="investors.html">Investors</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-    <a href="#" class="btn btn-primary nav-cta" onclick="openModal()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html" onclick="closeMobileMenu()">Home</a>
-  <a href="about.html" onclick="closeMobileMenu()">About Us</a>
-  <a href="products.html" onclick="closeMobileMenu()">Products</a>
-  <a href="infrastructure.html" onclick="closeMobileMenu()">Infrastructure</a>
-  <a href="investors.html" onclick="closeMobileMenu()">Investors</a>
-  <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
-  <a href="#" class="btn btn-primary" onclick="openModal();closeMobileMenu()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
-</div>
-
-<!-- PAGE HERO -->
-<section class="page-hero" style="background:linear-gradient(135deg,rgba(10,22,40,0.90),rgba(26,47,82,0.88)),url('https://images.unsplash.com/photo-1624027492684-327af1fb7559?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
-  <div class="page-hero-glow"></div>
-  <div class="container page-hero-content">
-    <div class="page-hero-breadcrumb">
-      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Contact Us</span>
+  <!-- NAVBAR -->
+  <nav id="navbar" class="solid">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">SRU</div>
+        <div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est.
+            1995</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="infrastructure.html">Infrastructure</a></li>
+        <li><a href="investors.html">Investors</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="#" class="btn btn-primary nav-cta" onclick="openModal()"><i class="fas fa-file-invoice"></i> Get a
+        Quote</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
-    <h1>Get in <span>Touch</span></h1>
-    <p>Have a bulk enquiry, partnership proposal, or investor query? Our team responds within 24 business hours. Toll-free helpline available 9:30 AM – 6 PM IST.</p>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobileMenu()">Home</a>
+    <a href="about.html" onclick="closeMobileMenu()">About Us</a>
+    <a href="products.html" onclick="closeMobileMenu()">Products</a>
+    <a href="infrastructure.html" onclick="closeMobileMenu()">Infrastructure</a>
+    <a href="investors.html" onclick="closeMobileMenu()">Investors</a>
+    <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+    <a href="#" class="btn btn-primary" onclick="openModal();closeMobileMenu()"><i class="fas fa-file-invoice"></i> Get
+      a Quote</a>
   </div>
-</section>
 
-<!-- OFFICES -->
-<section id="contact-page">
-  <div class="container">
-
-    <div class="section-header reveal">
-      <span class="section-tag">Our Offices</span>
-      <h2 class="section-title">Find <span>Us</span></h2>
-    </div>
-    <div class="offices-row">
-      <div class="office-card reveal" style="transition-delay:0.05s">
-        <div class="office-tag">Registered &amp; Corporate Office</div>
-        <div class="office-name">New Delhi — Head Office</div>
-        <div class="office-detail"><i class="fas fa-location-dot"></i>C-47, G/F, Shivalik Colony, Malviya Nagar, Near Shemrock School, South Delhi, New Delhi – 110017</div>
-        <div class="office-detail"><i class="fas fa-phone"></i>+91 75677 30702</div>
-        <div class="office-detail"><i class="fas fa-envelope"></i>srusteels95@gmail.com</div>
-        <div class="office-detail"><i class="fas fa-clock"></i>Mon–Sat: 9:30 AM – 6:00 PM</div>
+  <!-- PAGE HERO -->
+  <section class="page-hero"
+    style="background:linear-gradient(135deg,rgba(10,22,40,0.90),rgba(26,47,82,0.88)),url('https://images.unsplash.com/photo-1624027492684-327af1fb7559?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+    <div class="page-hero-glow"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-breadcrumb">
+        <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Contact Us</span>
       </div>
-      <div class="office-card reveal" style="transition-delay:0.12s">
+      <h1>Get in <span>Touch</span></h1>
+      <p>Have a bulk enquiry, partnership proposal, or investor query? Our team responds within 24 business hours.
+        Toll-free helpline available 9:30 AM – 6 PM IST.</p>
+    </div>
+  </section>
+
+  <!-- OFFICES -->
+  <section id="contact-page">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Our Offices</span>
+        <h2 class="section-title">Find <span>Us</span></h2>
+      </div>
+      <div class="offices-row" style="display: flex; justify-content: center">
+        <div class="office-card reveal" style="transition-delay:0.05s;">
+          <div class="office-tag">Registered &amp; Corporate Office</div>
+          <div class="office-name">New Delhi — Head Office</div>
+          <div class="office-detail"><i class="fas fa-location-dot"></i>C-47, G/F, Shivalik Colony, Malviya Nagar, Near
+            Shemrock School, South Delhi, New Delhi – 110017</div>
+          <div class="office-detail"><i class="fas fa-phone"></i>+91 75677 30702</div>
+          <div class="office-detail"><i class="fas fa-envelope"></i>srusteels95@gmail.com</div>
+          <div class="office-detail"><i class="fas fa-clock"></i>Mon–Sat: 9:30 AM – 6:00 PM</div>
+        </div>
+        <!-- <div class="office-card reveal" style="transition-delay:0.12s">
         <div class="office-tag">Plant &amp; Works Office — Haryana</div>
         <div class="office-name">Kundli Plant, Haryana</div>
         <div class="office-detail"><i class="fas fa-location-dot"></i>Industrial Model Township, Kundli, Sonepat, Haryana – 131028</div>
@@ -82,158 +94,288 @@
         <div class="office-detail"><i class="fas fa-phone"></i>+91 146 2243 100</div>
         <div class="office-detail"><i class="fas fa-envelope"></i>plant.neemrana@srusteels.com</div>
         <div class="office-detail"><i class="fas fa-clock"></i>Mon–Sat: 8:00 AM – 5:00 PM</div>
+      </div> -->
+      </div>
+
+      <!-- CONTACT MAIN -->
+      <div class="contact-main">
+        <div class="contact-info-col reveal-l">
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="ci-title">Sales Helpline</div>
+              <div class="ci-val">+91 75677 30702</div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="ci-title">Email Addresses</div>
+              <div class="ci-val">srusteels95@gmail.com</div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <div class="ci-title">Registered Office</div>
+              <div class="ci-val">C-47 G/F, Shivalik Colony, Malviya Nagar,<br>Near Shemrock School, South Delhi,<br>New
+                Delhi – 110017, India</div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="ci-title">Working Hours</div>
+              <div class="ci-val">Monday – Saturday: 9:30 AM – 6:00 PM IST<br>Sunday: Closed<br>Emergency / Plant: 24 ×
+                7</div>
+            </div>
+          </div>
+          <div class="ci-item" style="border:none">
+            <div class="ci-icon"><i class="fas fa-headset"></i></div>
+            <div>
+              <div class="ci-title">Customer Support</div>
+              <div class="ci-val">Average response time: &lt; 4 hours<br>Bulk enquiries: &lt; 2 hours<br>Investor
+                queries: &lt; 24 hours</div>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0!2d77.2066!3d28.5244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMalviya+Nagar%2C+New+Delhi!5e0!3m2!1sen!2sin!4v1"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-r">
+          <h3 style="font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:5px">Send Us a Message</h3>
+          <p style="font-size:0.8rem;color:var(--text-light);margin-bottom:22px">Fill in your details and our team will
+            get back to you within 24 hours.</p>
+          <form id="contactForm" onsubmit="submitContact(event)">
+            <input type="hidden" name="_subject" value="New Contact — SRU Steels Website">
+            <div class="form-row">
+              <div class="form-group"><label>Full Name *</label><input type="text" name="name"
+                  placeholder="Your full name" required></div>
+              <div class="form-group"><label>Company Name</label><input type="text" name="company"
+                  placeholder="Your company"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Email Address *</label><input type="email" name="email"
+                  placeholder="your@email.com" required></div>
+              <div class="form-group"><label>Phone Number *</label><input type="tel" name="phone"
+                  placeholder="+91 98765 43210" required></div>
+            </div>
+            <div class="form-group">
+              <label>Enquiry Type</label>
+              <select name="enquiry_type">
+                <option value="">Select enquiry type</option>
+                <option>Product Enquiry / Bulk Order</option>
+                <option>Investor / Shareholder Query</option>
+                <option>Dealership / Distribution Partnership</option>
+                <option>Plant Visit / Factory Tour</option>
+                <option>Careers &amp; Recruitment</option>
+                <option>Media / Press</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Product of Interest</label>
+              <select name="product">
+                <option value="">Select product (optional)</option>
+                <option>TMT Bars (Fe 500D)</option>
+                <option>TMT Bars (Fe 550D)</option>
+                <option>Steel Billets</option>
+                <option>Wire Rods</option>
+                <option>HR Coils / Sheets</option>
+                <option>CR Sheets / Coils</option>
+                <option>Galvanized Coils</option>
+                <option>Structural Steel (Angles, Channels, Beams)</option>
+                <option>Seamless Steel Pipes</option>
+                <option>Custom Fabrication</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message / Requirements</label>
+              <textarea name="message"
+                placeholder="Tell us about your requirements — quantity, grade, delivery location, timeline, any special specifications..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-btn"><i class="fas fa-paper-plane"></i> Send
+              Message</button>
+            <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i> Thank you! We've received
+              your message and will respond within 24 hours.</div>
+          </form>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- CONTACT MAIN -->
-    <div class="contact-main">
-      <div class="contact-info-col reveal-l">
-        <div class="ci-item">
-          <div class="ci-icon"><i class="fas fa-phone"></i></div>
-          <div><div class="ci-title">Sales Helpline</div><div class="ci-val">+91 75677 30702</div></div>
+  <!-- FAQ -->
+  <section id="faq-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <p class="section-subtitle">Quick answers to common queries from our buyers, distributors, and investors.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal" style="transition-delay:0.04s">
+          <div class="faq-q" onclick="toggleFaq(this)">What is the minimum order quantity for TMT bars? <i
+              class="fas fa-plus"></i></div>
+          <div class="faq-a">The minimum order quantity for TMT bars is 10 MT (metric tonnes) for standard sizes
+            (8mm–25mm). For 28mm–32mm diameters, the MOQ is 20 MT. Spot delivery from our stockyard is available for
+            smaller quantities through our authorised dealer network.</div>
         </div>
-        <div class="ci-item">
-          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
-          <div><div class="ci-title">Email Addresses</div><div class="ci-val">srusteels95@gmail.com</div></div>
+        <div class="faq-item reveal" style="transition-delay:0.08s">
+          <div class="faq-q" onclick="toggleFaq(this)">Do you provide Mill Test Certificates (MTCs)? <i
+              class="fas fa-plus"></i></div>
+          <div class="faq-a">Yes. Every consignment from SRU Steels ships with a NABL-validated Mill Test Certificate
+            (MTC) containing complete chemical composition and mechanical test results (tensile strength, yield
+            strength, elongation, bend-rebend). Digital copies are emailed on dispatch; hard copies accompany the
+            shipment.</div>
         </div>
-        <div class="ci-item">
-          <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
-          <div><div class="ci-title">Registered Office</div><div class="ci-val">C-47 G/F, Shivalik Colony, Malviya Nagar,<br>Near Shemrock School, South Delhi,<br>New Delhi – 110017, India</div></div>
+        <div class="faq-item reveal" style="transition-delay:0.12s">
+          <div class="faq-q" onclick="toggleFaq(this)">What are the payment terms for bulk orders? <i
+              class="fas fa-plus"></i></div>
+          <div class="faq-a">We offer flexible payment terms: 100% advance for spot deliveries; 50% advance + 50%
+            against documents for regular customers; 30-day credit (LC basis) for long-term contract buyers subject to
+            credit approval. Contact our sales team for customised terms for orders above 500 MT/month.</div>
         </div>
-        <div class="ci-item">
-          <div class="ci-icon"><i class="fas fa-clock"></i></div>
-          <div><div class="ci-title">Working Hours</div><div class="ci-val">Monday – Saturday: 9:30 AM – 6:00 PM IST<br>Sunday: Closed<br>Emergency / Plant: 24 × 7</div></div>
+        <div class="faq-item reveal" style="transition-delay:0.16s">
+          <div class="faq-q" onclick="toggleFaq(this)">How long does delivery take across India? <i
+              class="fas fa-plus"></i></div>
+          <div class="faq-a">Delivery timelines depend on location: Delhi NCR / Haryana / Rajasthan — 24–48 hours. North
+            India (Punjab, UP, HP, J&amp;K) — 48–72 hours. West India (Gujarat, Maharashtra) — 4–6 days. South/East
+            India — 6–9 days. Expedited delivery options available on request for project emergencies.</div>
         </div>
-        <div class="ci-item" style="border:none">
-          <div class="ci-icon"><i class="fas fa-headset"></i></div>
-          <div><div class="ci-title">Customer Support</div><div class="ci-val">Average response time: &lt; 4 hours<br>Bulk enquiries: &lt; 2 hours<br>Investor queries: &lt; 24 hours</div></div>
+        <div class="faq-item reveal" style="transition-delay:0.2s">
+          <div class="faq-q" onclick="toggleFaq(this)">Are your TMT bars BIS certified? <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-a">Yes. Our TMT Fe 500D and Fe 550D bars carry the BIS IS 1786:2008 licence (Licence No.
+            CM/L-5648211), issued by the Bureau of Indian Standards. All bars are manufactured under strict quality
+            control and the BIS mark is stamped on every bar along with the grade, diameter, and plant code.</div>
         </div>
-        <div class="map-wrap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0!2d77.2066!3d28.5244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMalviya+Nagar%2C+New+Delhi!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="faq-item reveal" style="transition-delay:0.24s">
+          <div class="faq-q" onclick="toggleFaq(this)">How can I become an authorised dealer for SRU Steels? <i
+              class="fas fa-plus"></i></div>
+          <div class="faq-a">We welcome dealership enquiries from established steel traders with an annual turnover of
+            ₹5 Crores or above. Please fill in the contact form above selecting "Dealership / Distribution Partnership"
+            and our regional sales head will reach out within 48 hours with the dealership terms and territory
+            availability.</div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:0.28s">
+          <div class="faq-q" onclick="toggleFaq(this)">Where can I find information about SRU Steels' share price and
+            financial results? <i class="fas fa-plus"></i></div>
+          <div class="faq-a">SRU Steels Limited is listed on the BSE (Scrip: SRUSTLS). Real-time share price data is
+            available on BSE India's website and all major financial platforms. Financial results, annual reports, and
+            shareholding patterns are available on our <a href="investors.html"
+              style="color:var(--gold-dark);font-weight:600">Investor Relations page</a> and on BSE's corporate filings
+            portal.</div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="contact-form-wrap reveal-r">
-        <h3 style="font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:5px">Send Us a Message</h3>
-        <p style="font-size:0.8rem;color:var(--text-light);margin-bottom:22px">Fill in your details and our team will get back to you within 24 hours.</p>
-        <form id="contactForm" onsubmit="submitContact(event)">
-          <input type="hidden" name="_subject" value="New Contact — SRU Steels Website">
-          <div class="form-row">
-            <div class="form-group"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
-            <div class="form-group"><label>Company Name</label><input type="text" name="company" placeholder="Your company"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="your@email.com" required></div>
-            <div class="form-group"><label>Phone Number *</label><input type="tel" name="phone" placeholder="+91 98765 43210" required></div>
-          </div>
-          <div class="form-group">
-            <label>Enquiry Type</label>
-            <select name="enquiry_type">
-              <option value="">Select enquiry type</option>
-              <option>Product Enquiry / Bulk Order</option>
-              <option>Investor / Shareholder Query</option>
-              <option>Dealership / Distribution Partnership</option>
-              <option>Plant Visit / Factory Tour</option>
-              <option>Careers &amp; Recruitment</option>
-              <option>Media / Press</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Product of Interest</label>
-            <select name="product">
-              <option value="">Select product (optional)</option>
-              <option>TMT Bars (Fe 500D)</option>
-              <option>TMT Bars (Fe 550D)</option>
-              <option>Steel Billets</option>
-              <option>Wire Rods</option>
-              <option>HR Coils / Sheets</option>
-              <option>CR Sheets / Coils</option>
-              <option>Galvanized Coils</option>
-              <option>Structural Steel (Angles, Channels, Beams)</option>
-              <option>Seamless Steel Pipes</option>
-              <option>Custom Fabrication</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Message / Requirements</label>
-            <textarea name="message" placeholder="Tell us about your requirements — quantity, grade, delivery location, timeline, any special specifications..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary form-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-          <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i> Thank you! We've received your message and will respond within 24 hours.</div>
-        </form>
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Still Have Questions?</h2>
+        <p>Call our toll-free sales helpline — available Monday to Saturday, 9:30 AM to 6:00 PM.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="tel:18001037786" class="btn btn-cta-navy"><i class="fas fa-phone"></i> 1800-103-7786</a>
+        <a href="#" class="btn btn-cta-wh" onclick="openModal()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
       </div>
     </div>
   </div>
-</section>
 
-<!-- FAQ -->
-<section id="faq-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">FAQ</span>
-      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
-      <p class="section-subtitle">Quick answers to common queries from our buyers, distributors, and investors.</p>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><a href="index.html" class="logo">
+            <div class="logo-mark">SRU</div>
+            <div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est.
+                1995</span></div>
+          </a>
+          <p>BSE-listed steel manufacturing company delivering premium steel products across India since 1995.</p>
+          <div class="social-links"><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a><a href="#"
+              class="social-link"><i class="fab fa-x-twitter"></i></a><a href="#" class="social-link"><i
+                class="fab fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="f-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+            <li><a href="infrastructure.html"><i class="fas fa-chevron-right"></i> Infrastructure</a></li>
+            <li><a href="investors.html"><i class="fas fa-chevron-right"></i> Investors</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul class="f-links">
+            <li><a href="products.html"><i class="fas fa-chevron-right"></i> TMT Bars</a></li>
+            <li><a href="products.html"><i class="fas fa-chevron-right"></i> Steel Billets</a></li>
+            <li><a href="products.html"><i class="fas fa-chevron-right"></i> Wire Rods</a></li>
+            <li><a href="products.html"><i class="fas fa-chevron-right"></i> HR Coils / Sheets</a></li>
+            <li><a href="products.html"><i class="fas fa-chevron-right"></i> CR Sheets / Coils</a></li>
+            <li><a href="products.html"><i class="fas fa-chevron-right"></i> Structural Steel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="f-contact">
+            <li><i class="fas fa-location-dot"></i> C-47 G/F, Shivalik Colony, Malviya Nagar, New Delhi – 110017</li>
+            <li><i class="fas fa-phone"></i> +91 11 2668 4500</li>
+            <li><i class="fas fa-envelope"></i> srusteels95@gmail.com</li>
+            <li><i class="fas fa-building"></i> CIN: L01111DL1995PLC107286</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-cert">
+        <div class="cert-badges"><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 9001:2015</span><span
+            class="cert-pill"><i class="fas fa-certificate"></i> BIS IS 1786</span><span class="cert-pill"><i
+              class="fas fa-certificate"></i> ISO 14001:2015</span><span class="cert-pill"><i class="fas fa-award"></i>
+            NABL Lab</span><span class="cert-pill"><i class="fas fa-chart-line"></i> BSE Listed</span></div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          <p>© 2025 SRU Steels Limited. All rights reserved.</p>
+          <p class="cin-text">CIN: L01111DL1995PLC107286 · Reg. No.: 107286 · ROC Delhi I</p>
+        </div>
+        <div class="fb-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Disclaimer</a></div>
+      </div>
     </div>
-    <div class="faq-list">
-      <div class="faq-item reveal" style="transition-delay:0.04s">
-        <div class="faq-q" onclick="toggleFaq(this)">What is the minimum order quantity for TMT bars? <i class="fas fa-plus"></i></div>
-        <div class="faq-a">The minimum order quantity for TMT bars is 10 MT (metric tonnes) for standard sizes (8mm–25mm). For 28mm–32mm diameters, the MOQ is 20 MT. Spot delivery from our stockyard is available for smaller quantities through our authorised dealer network.</div>
-      </div>
-      <div class="faq-item reveal" style="transition-delay:0.08s">
-        <div class="faq-q" onclick="toggleFaq(this)">Do you provide Mill Test Certificates (MTCs)? <i class="fas fa-plus"></i></div>
-        <div class="faq-a">Yes. Every consignment from SRU Steels ships with a NABL-validated Mill Test Certificate (MTC) containing complete chemical composition and mechanical test results (tensile strength, yield strength, elongation, bend-rebend). Digital copies are emailed on dispatch; hard copies accompany the shipment.</div>
-      </div>
-      <div class="faq-item reveal" style="transition-delay:0.12s">
-        <div class="faq-q" onclick="toggleFaq(this)">What are the payment terms for bulk orders? <i class="fas fa-plus"></i></div>
-        <div class="faq-a">We offer flexible payment terms: 100% advance for spot deliveries; 50% advance + 50% against documents for regular customers; 30-day credit (LC basis) for long-term contract buyers subject to credit approval. Contact our sales team for customised terms for orders above 500 MT/month.</div>
-      </div>
-      <div class="faq-item reveal" style="transition-delay:0.16s">
-        <div class="faq-q" onclick="toggleFaq(this)">How long does delivery take across India? <i class="fas fa-plus"></i></div>
-        <div class="faq-a">Delivery timelines depend on location: Delhi NCR / Haryana / Rajasthan — 24–48 hours. North India (Punjab, UP, HP, J&amp;K) — 48–72 hours. West India (Gujarat, Maharashtra) — 4–6 days. South/East India — 6–9 days. Expedited delivery options available on request for project emergencies.</div>
-      </div>
-      <div class="faq-item reveal" style="transition-delay:0.2s">
-        <div class="faq-q" onclick="toggleFaq(this)">Are your TMT bars BIS certified? <i class="fas fa-plus"></i></div>
-        <div class="faq-a">Yes. Our TMT Fe 500D and Fe 550D bars carry the BIS IS 1786:2008 licence (Licence No. CM/L-5648211), issued by the Bureau of Indian Standards. All bars are manufactured under strict quality control and the BIS mark is stamped on every bar along with the grade, diameter, and plant code.</div>
-      </div>
-      <div class="faq-item reveal" style="transition-delay:0.24s">
-        <div class="faq-q" onclick="toggleFaq(this)">How can I become an authorised dealer for SRU Steels? <i class="fas fa-plus"></i></div>
-        <div class="faq-a">We welcome dealership enquiries from established steel traders with an annual turnover of ₹5 Crores or above. Please fill in the contact form above selecting "Dealership / Distribution Partnership" and our regional sales head will reach out within 48 hours with the dealership terms and territory availability.</div>
-      </div>
-      <div class="faq-item reveal" style="transition-delay:0.28s">
-        <div class="faq-q" onclick="toggleFaq(this)">Where can I find information about SRU Steels' share price and financial results? <i class="fas fa-plus"></i></div>
-        <div class="faq-a">SRU Steels Limited is listed on the BSE (Scrip: SRUSTLS). Real-time share price data is available on BSE India's website and all major financial platforms. Financial results, annual reports, and shareholding patterns are available on our <a href="investors.html" style="color:var(--gold-dark);font-weight:600">Investor Relations page</a> and on BSE's corporate filings portal.</div>
-      </div>
+  </footer>
+  <div class="modal-overlay" id="quoteModal">
+    <div class="modal"><button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button><span
+        class="section-tag">Quick Enquiry</span>
+      <h3 style="font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:6px">Get a Quote</h3>
+      <p style="font-size:0.83rem;color:var(--text-light);margin-bottom:24px">Our sales team will respond within 2
+        hours.</p>
+      <form onsubmit="submitQuote(event)"><input type="hidden" name="_subject"
+          value="New Quote Request — SRU Steels Website">
+        <div class="form-group"><label>Name *</label><input type="text" name="name" placeholder="Your full name"
+            required></div>
+        <div class="form-group"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 98765 43210"
+            required></div>
+        <div class="form-group"><label>Product Required</label><select name="product">
+            <option>TMT Bars</option>
+            <option>Steel Billets</option>
+            <option>Wire Rods</option>
+            <option>HR Coils</option>
+            <option>Structural Steel</option>
+          </select></div>
+        <div class="form-group"><label>Quantity (MT)</label><input type="text" name="quantity" placeholder="e.g. 50 MT">
+        </div><button type="submit" class="btn btn-primary form-btn"><i class="fas fa-paper-plane"></i> Request
+          Quote</button>
+      </form>
     </div>
   </div>
-</section>
-
-<!-- CTA -->
-<div class="cta-banner">
-  <div class="container cta-inner">
-    <div class="cta-text"><h2>Still Have Questions?</h2><p>Call our toll-free sales helpline — available Monday to Saturday, 9:30 AM to 6:00 PM.</p></div>
-    <div class="cta-actions">
-      <a href="tel:18001037786" class="btn btn-cta-navy"><i class="fas fa-phone"></i> 1800-103-7786</a>
-      <a href="#" class="btn btn-cta-wh" onclick="openModal()"><i class="fas fa-file-invoice"></i> Get a Quote</a>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about"><a href="index.html" class="logo"><div class="logo-mark">SRU</div><div class="logo-text"><span class="logo-name">SRU STEELS</span><span class="logo-tagline">Limited · Est. 1995</span></div></a><p>BSE-listed steel manufacturing company delivering premium steel products across India since 1995.</p><div class="social-links"><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a><a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></div></div>
-      <div class="footer-col"><h4>Quick Links</h4><ul class="f-links"><li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li><li><a href="infrastructure.html"><i class="fas fa-chevron-right"></i> Infrastructure</a></li><li><a href="investors.html"><i class="fas fa-chevron-right"></i> Investors</a></li><li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Products</h4><ul class="f-links"><li><a href="products.html"><i class="fas fa-chevron-right"></i> TMT Bars</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Steel Billets</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Wire Rods</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> HR Coils / Sheets</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> CR Sheets / Coils</a></li><li><a href="products.html"><i class="fas fa-chevron-right"></i> Structural Steel</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul class="f-contact"><li><i class="fas fa-location-dot"></i> C-47 G/F, Shivalik Colony, Malviya Nagar, New Delhi – 110017</li><li><i class="fas fa-phone"></i> +91 11 2668 4500</li><li><i class="fas fa-envelope"></i> srusteels95@gmail.com</li><li><i class="fas fa-building"></i> CIN: L01111DL1995PLC107286</li></ul></div>
-    </div>
-    <div class="footer-cert"><div class="cert-badges"><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 9001:2015</span><span class="cert-pill"><i class="fas fa-certificate"></i> BIS IS 1786</span><span class="cert-pill"><i class="fas fa-certificate"></i> ISO 14001:2015</span><span class="cert-pill"><i class="fas fa-award"></i> NABL Lab</span><span class="cert-pill"><i class="fas fa-chart-line"></i> BSE Listed</span></div></div>
-    <div class="footer-bottom"><div><p>© 2025 SRU Steels Limited. All rights reserved.</p><p class="cin-text">CIN: L01111DL1995PLC107286 · Reg. No.: 107286 · ROC Delhi I</p></div><div class="fb-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Disclaimer</a></div></div>
-  </div>
-</footer>
-<div class="modal-overlay" id="quoteModal"><div class="modal"><button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button><span class="section-tag">Quick Enquiry</span><h3 style="font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:6px">Get a Quote</h3><p style="font-size:0.83rem;color:var(--text-light);margin-bottom:24px">Our sales team will respond within 2 hours.</p><form onsubmit="submitQuote(event)"><input type="hidden" name="_subject" value="New Quote Request — SRU Steels Website"><div class="form-group"><label>Name *</label><input type="text" name="name" placeholder="Your full name" required></div><div class="form-group"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 98765 43210" required></div><div class="form-group"><label>Product Required</label><select name="product"><option>TMT Bars</option><option>Steel Billets</option><option>Wire Rods</option><option>HR Coils</option><option>Structural Steel</option></select></div><div class="form-group"><label>Quantity (MT)</label><input type="text" name="quantity" placeholder="e.g. 50 MT"></div><button type="submit" class="btn btn-primary form-btn"><i class="fas fa-paper-plane"></i> Request Quote</button></form></div></div>
-<button id="btt"><i class="fas fa-chevron-up"></i></button>
-<script src="js/main.js"></script>
+  <button id="btt"><i class="fas fa-chevron-up"></i></button>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
