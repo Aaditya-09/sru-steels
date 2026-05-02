@@ -195,7 +195,7 @@ async function submitContact(e) {
       setTimeout(() => success.style.display = 'none', 6000);
     }
   } catch (err) {
-    alert('Something went wrong. Please call us directly on +91 11 2668 4500.');
+    alert('Something went wrong. Please call us directly on +91 75677 30702.');
   } finally {
     setButtonLoading(btn, false);
   }
@@ -220,7 +220,7 @@ async function submitQuote(e) {
     closeModal();
     setTimeout(() => alert('✅ Quote request sent! Our sales team will call you within 2 hours.'), 300);
   } catch (err) {
-    alert('Something went wrong. Please call us on +91 11 2668 4500.');
+    alert('Something went wrong. Please call us on +91 75677 30702.');
   } finally {
     setButtonLoading(btn, false);
   }
